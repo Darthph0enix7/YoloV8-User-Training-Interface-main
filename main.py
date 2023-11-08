@@ -32,7 +32,7 @@ def main():
 
         while True:
             event2, values2 = window2.read(timeout=100)
-            handle_training_page_events(event2, values2, window2, yolo_thread)
+            handle_training_page_events(event2, values2, window2, yolo_thread, output_queue)
 
             if event2 in (sg.WIN_CLOSED, 'Exit', 'Cancel'):
                 break
@@ -52,7 +52,7 @@ def main():
 
         while True:
             event2, values2 = window2.read(timeout=100)
-            handle_detection_page_events(event2, values2, window2, yolo_thread, )
+            handle_detection_page_events(event2, values2, window2, yolo_thread, output_queue )
 
             if event2 in (sg.WIN_CLOSED, 'Exit', 'Cancel'):
                 break
